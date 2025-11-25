@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: azure;
+}
+
+#header{
+    background-color: lightskyblue;
+    color: aliceblue;
+    padding: 5px 0;
+    text-align: center;
+}
+
+#mainDiv{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    width: max-content;
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.featureItems{
+    margin:15px;
+
+    display: grid;
+    grid-template-columns: 150px 250px;
+    text-align: left ;
+}
+
+
+
+input,select{
+    padding: 5px;
+}
+
+
+.fromAction{
+    text-align: center;
+}
+
+.fromAction button{
+    margin: 15px;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#clearButton{
+    background-color: lightgoldenrodyellow;
+    border-color: darkorange;
+}
+
+#clearButton:hover{
+    background-color: rgb(248, 248, 1);
+    border-color: darkorange;
+}
+
+#predictButton{
+ background-color: lightgreen;
+    border-color: darkgreen;
+}
+
+#predictButton:hover{
+ background-color: green;
+    border-color: darkgreen;
+    color: white;
+}
+
+
+#PredictedPrice{
+    background-color: rgb(254, 215, 221);
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+#PredictedPrice label{
+    color: rgb(76, 76, 249);
+    font-size: x-large;
+    font-weight: 700;
+}
+
+
+#price{
+    margin-top: 15px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Bike Price Predection</h1>
+    </div>
+
+    <div id="mainDiv">
+        <div class="featureItems">
+            <label for="bikeAge">Bike Age</label>
+            <input type="digit" name="bikeAge" id="bikeAge" />
+        </div>
+
+        <div class="featureItems">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                <option value="">--Select City--</option>
+                <option value="">Delhi</option>
+                <option value="">Patna</option>
+                <option value="">Kolkata</option>
+                <option value="">Bangalor</option>
+            </select>
+        </div>
+
+        <div class="featureItems">
+            <label for="owner">OwnerShip</label>
+            <select name="owner" id="owner">
+                <option value="">--Select OwnerShip--</option>
+                <option value="First Owner">First Owner</option>
+                <option value="Second Owner">Second Owner</option>
+                <option value="Third Owner">Third Owner</option>
+                <option value="Fourth Owner & More">Fourth Owner & More</option>
+            </select>
+        </div>
+
+        <div class="featureItems">
+            <label for="power">Power</label>
+            <input type="number" name="power" id="power" />
+        </div>
+
+        <div class="featureItems">
+            <label for="brand">Brand</label>
+            <select name="brand" id="brand">
+                <option value="">--Select Brand--</option>
+                <option value="">Honda</option>
+                <option value="">TVS</option>
+                <option value="">Hornet</option>
+                <option value="">KTM</option>
+                <option value="">SP125</option>
+            </select>
+        </div>
+
+        <div class="featureItems">
+            <label for="originalPrice">Original Price</label>
+            <input type="number" name="originalPrice" id="originalPrice" />
+        </div>
+
+        <div class="featureItems">
+            <label for="kms_driven">KMs Driven</label>
+            <input type="number" name="kms_driven" id="kms_driven" />
+        </div>
+
+        <div class="fromAction">
+            <button id="clearButton" onclick="clearForm()">Clear form</button>
+            <button id="predictButton" onclick="predict()">Predict Price</button>
+        </div>
+
+        <div id="PredictedPrice">
+            <label for="predictedPrice">Predicted Price</label>
+            <div id="price">₹ XXXXX.XX</div>
+        </div>
+    </div>
+    <script >
+        function clearForm(){
+    console.log("clear Button Clicked")
+
+
+}
+
+function predict(){
+    console.log("Predict Button Clicked")
+
+
+const ba = document.getElementById("bikeAge").value;
+const ct = document.getElementById("city").value;
+const on = document.getElementById("Ownership").value;
+const pw = document.getElementById("power").value;
+const bn = document.getElementById("brand").value;
+const op = document.getElementById("OrignalPrice").value;
+const km = document.getElementById("Kmsdriven").value;
+
+
+console.log("Bike Age :" + ba)
+console.log("City :" + ct)
+console.log("Ownership :" + on)
+console.log("Power :" + pw)
+console.log("Brand :" + bn)
+console.log("Orignal Price :" + op)
+console.log("kms_driven:" + Km)
+
+
+
+const data = {
+    age:ba,
+    city:ct,
+    owner:on,
+    power:pw,
+}
+
+}
+
+function predict(){
+
+}
+async function loaddata(){
+    
+}
+
+    </script>
+
+</body>
+
+</html>
